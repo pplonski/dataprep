@@ -190,7 +190,7 @@ def _format_ip(val: Any, input_format: str, output_format: str, errors: str) -> 
     # convert to full representation
     else:
         dlm = "." if address.version == 4 else ":"  # delimiter
-        result = "".join(f"{'0' * (4 - len(x))}{x}{dlm}" for x in address.exploded.split(dlm))[:-1]
+        result = f"{dlm}".join(f"{'0' * (4 - len(x))}{x}" for x in address.exploded.split(dlm))
 
     return result, 2 if result != val else 3
 

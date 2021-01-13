@@ -55,6 +55,8 @@ def clean_url(
     """
     This function cleans url
 
+    Read more in the :ref:`User Guide <url_userguide>`.
+
     Parameters
     ----------
     df
